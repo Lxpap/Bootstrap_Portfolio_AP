@@ -1,0 +1,420 @@
+* {
+  box-sizing: border-box;
+
+}
+
+/* Standardized colours for quickswap (hero banner background excluded) */
+
+:root {
+  --light-color: #EBEBEB;
+  --dark-color: #000000;
+  --vibrant-color: #EA3788;
+}
+
+/* General styling */
+
+body {
+  margin: 0 auto;
+  padding: 0 auto;
+  font-family: 'Montserrat', Arial, sans-serif;
+  line-height: 1.5;
+  background-color: var(--light-color);
+  width: 100%;
+  
+}
+
+.page-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  }
+
+/* Header styling */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: var(--dark-color);
+  color: var(--light-color);
+  width: 100%;
+}
+
+.header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header a:hover {
+  color: var(--vibrant-color)
+}
+
+.header a:active {
+  color: var(--vibrant-color)
+}
+
+h1 {
+  position: relative;
+  font-weight: 500;
+  
+}
+
+
+ul {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  margin: 0 5px;
+}
+
+/* hero banner styling */
+
+.hero-banner {
+
+  background-image: linear-gradient(0deg, #ff00997d, rgba(0, 0, 0, 0.5)), url(../images/headerimage2.png);
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 500;
+  width: 100%;
+  
+}
+
+.hero-banner span {
+
+  color: var(--light-color);
+  text-shadow:
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    -2px -2px 0 #000,
+    2px -2px 0 #000;
+
+}
+
+#gear {
+
+  text-shadow: none;
+}
+
+#www {
+  color: #949494;
+}
+
+/* About section styling */
+
+#about {
+
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+#about img {
+  margin-top: 15px;
+}
+
+#www2 {
+  color: var(--vibrant-color);
+}
+
+/* Below .h2-lines styling applies to all sections */
+
+.h2-lines {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.h2-lines div {
+  background-color: var(--vibrant-color);
+  height: 3px;
+  margin-top: 18px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 45vw;
+}
+
+#about p {
+  margin-top: 15px;
+  text-align: center;
+  max-width: 1600px;
+  width: 100%;
+}
+
+/* work container styling */
+
+.work-container {
+  display: grid;
+  margin: 0 auto;
+  /* padding-right: 10px; */
+  gap: 5px;
+  width: 100%;
+  max-width: 1600px;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "main-project main-project other-project1 other-project2"
+  "main-project main-project other-project3 other-project4";
+
+}
+
+
+#main-project {
+
+  grid-area: main-project;
+  
+}
+
+  #other-project1 {
+
+    grid-area: other-project1;
+    
+  }
+  
+  #other-project2 {
+
+    grid-area: other-project2;
+    
+  }
+  
+  #other-project3 {
+
+    grid-area: other-project3;
+   
+  }
+  
+  #other-project4 {
+
+    grid-area: other-project4;
+    
+  }
+
+  .work-section {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  
+  }
+
+  .work-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    
+  }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  
+}
+
+.overlay h3,
+.overlay p {
+  color: var(--light-color);
+  text-align: center;
+  margin: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+  font-size: 1rem;
+   
+}
+
+.overlay h3 {
+  color: var(--vibrant-color);
+}
+
+.work-section:hover .overlay {
+  opacity: 1;
+}
+
+.work-section:hover img {
+  transform: scale(1.1);
+}
+
+.work-section a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+/* contact section styling */
+
+.icons {
+  margin-top: 0px;
+  display: flex;
+  width: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  margin: 20px;
+
+}
+
+.icons img {
+  width: auto;
+  height: 50px;
+
+}
+
+.contact-email,
+.contact-linkedin,
+.contact-github {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.contact-email:hover .email-text,
+.contact-linkedin:hover .linkedin-text,
+.contact-github:hover .github-text {
+  opacity: 1;
+}
+
+.email-text,
+.linkedin-text,
+.github-text {
+  text-align: center;
+  margin-top: 0px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: var(--vibrant-color)
+}
+
+/* Media queries for smaller screens below. Note: Due to the build, the kickoff is at 768px (tablet) but mostly adjusts to smaller screens (phone) too. */
+
+@media (max-width: 768px) {
+
+  .work-container {
+    display: grid;
+    margin: 0 auto;
+    gap: 5px;
+    width: 95vw;
+    max-width: 1600px;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "main-project main-project"
+    "main-project main-project"
+    "other-project1 other-project2"
+    "other-project3 other-project4";
+  
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; 
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .overlay h3,
+  .overlay p {
+  color: var(--light-color);
+  text-shadow: 
+  1px 1px 0 #000,
+    -1px 1px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000;
+  text-align: center;
+  margin: 10px;
+  font-size: 4vw;
+  margin: 2vw;
+  }
+
+  .overlay h3 {
+    color: var(--vibrant-color);
+  }
+
+  #about {
+    display: flex;
+    width: auto;
+    height: auto;
+  }
+
+}
+
+/* Additional media query to serve mobiles too as identified "breaking point" is at 555px */
+
+@media (max-width: 555px) {
+
+  .header {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+    text-wrap: nowrap;
+  }
+
+  .header h1 {
+    font-size: 1rem;
+  }
+
+  .header nav {
+    font-size: 0.8rem;
+  }
+
+  .hero-banner {
+    font-size: 1.5rem;
+  }
+
+}
+
+/* Easter egg speech bubble dynamic placement */
+
+@media (min-width: 600px) {
+  h1:hover::after {
+    content: url("../images/hi-icon-50.png");
+    max-height: 20px;
+    position: absolute;
+    right: -85px;
+    top: 0px;
+  }
+}
